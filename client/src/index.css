@@ -1,0 +1,324 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(248, 100%, 99%);
+  --foreground: hsl(222, 12%, 13%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 12%, 13%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 12%, 13%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(214, 100%, 64%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(142, 76%, 36%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(262, 83%, 58%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(222, 12%, 13%);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(222, 84%, 5%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 33%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --popover: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 5%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 33%, 17%);
+  --input: hsl(217, 33%, 17%);
+  --primary: hsl(214, 100%, 64%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(142, 76%, 36%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(262, 83%, 58%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(212, 12%, 70%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    @apply bg-gradient-to-br from-blue-50 to-purple-50;
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-accent;
+  }
+
+  .gradient-secondary {
+    @apply bg-gradient-to-r from-secondary to-primary;
+  }
+
+  .gradient-accent {
+    @apply bg-gradient-to-r from-accent to-secondary;
+  }
+
+  .sidebar-shadow {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .stat-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow;
+  }
+
+  .nav-item {
+    @apply flex items-center space-x-3 px-4 py-3 rounded-lg font-medium transition-colors;
+  }
+
+  .nav-item-active {
+    @apply bg-primary bg-opacity-10 text-primary;
+  }
+
+  .nav-item-inactive {
+    @apply text-gray-600 hover:bg-gray-50;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-accent text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg transition-shadow;
+  }
+
+  .btn-secondary {
+    @apply border border-gray-300 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors;
+  }
+
+  .platform-icon {
+    @apply w-10 h-10 rounded-lg flex items-center justify-center text-white;
+  }
+
+  .platform-instagram {
+    @apply bg-gradient-to-r from-pink-500 to-purple-600;
+  }
+
+  .platform-facebook {
+    @apply bg-gradient-to-r from-blue-400 to-blue-600;
+  }
+
+  .platform-tiktok {
+    @apply bg-gradient-to-r from-black to-gray-800;
+  }
+
+  .platform-twitter {
+    @apply bg-gradient-to-r from-blue-500 to-blue-700;
+  }
+
+  .status-indicator {
+    @apply w-2 h-2 rounded-full;
+  }
+
+  .status-active {
+    @apply bg-secondary animate-pulse;
+  }
+
+  .status-inactive {
+    @apply bg-gray-400;
+  }
+
+  .hashtag-badge {
+    @apply text-xs px-2 py-1 rounded;
+  }
+
+  .hashtag-primary {
+    @apply bg-primary bg-opacity-10 text-primary;
+  }
+
+  .hashtag-secondary {
+    @apply bg-secondary bg-opacity-10 text-secondary;
+  }
+
+  .hashtag-accent {
+    @apply bg-accent bg-opacity-10 text-accent;
+  }
+
+  .chart-container {
+    @apply h-64 bg-gradient-to-r from-primary to-accent bg-opacity-5 rounded-lg;
+  }
+
+  .loading-spinner {
+    @apply animate-spin rounded-full h-4 w-4 border-b-2 border-primary;
+  }
+
+  .content-preview {
+    @apply bg-gray-50 rounded-lg p-4 border border-gray-200;
+  }
+
+  .form-section {
+    @apply space-y-4;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+
+  .form-select {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+
+  .form-textarea {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+
+  .frequency-button {
+    @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors;
+  }
+
+  .frequency-button-active {
+    @apply bg-primary text-white;
+  }
+
+  .frequency-button-inactive {
+    @apply bg-gray-100 text-gray-700 hover:bg-gray-200;
+  }
+
+  .post-preview {
+    @apply bg-white rounded-lg p-4 shadow-sm border border-gray-200;
+  }
+
+  .engagement-metric {
+    @apply text-center;
+  }
+
+  .engagement-value {
+    @apply text-2xl font-bold text-gray-900;
+  }
+
+  .engagement-label {
+    @apply text-sm text-gray-500;
+  }
+
+  .notification-badge {
+    @apply absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4;
+  }
+
+  .modal-content {
+    @apply bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto;
+  }
+
+  .modal-header {
+    @apply p-6 border-b border-gray-200;
+  }
+
+  .modal-body {
+    @apply p-6 space-y-6;
+  }
+
+  .modal-footer {
+    @apply px-6 py-4 border-t border-gray-200 flex justify-end space-x-3;
+  }
+
+  .schedule-option {
+    @apply flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors;
+  }
+
+  .schedule-radio {
+    @apply text-primary focus:ring-primary;
+  }
+
+  .profile-picture {
+    @apply w-10 h-10 rounded-full object-cover;
+  }
+
+  .user-info {
+    @apply flex-1;
+  }
+
+  .user-name {
+    @apply text-sm font-medium text-gray-900;
+  }
+
+  .user-plan {
+    @apply text-xs text-gray-500;
+  }
+
+  .error-message {
+    @apply text-red-600 text-sm mt-1;
+  }
+
+  .success-message {
+    @apply text-green-600 text-sm mt-1;
+  }
+
+  .empty-state {
+    @apply text-center py-8 text-gray-500;
+  }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 768px) {
+    .form-section {
+      @apply mb-4;
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+      @apply text-base; /* Prevents zoom on iOS */
+    }
+    
+    .nav-item {
+      @apply text-sm px-3 py-2;
+    }
+    
+    .card-compact {
+      @apply p-4;
+    }
+    
+    .modal-content {
+      @apply max-w-full m-2 max-h-[95vh];
+    }
+    
+    .stats-card {
+      @apply p-4;
+    }
+    
+    .engagement-value {
+      @apply text-xl;
+    }
+    
+    .notification-badge {
+      @apply w-4 h-4 text-xs;
+    }
+  }
+
+  /* Touch-friendly tap targets */
+  @media (hover: none) {
+    .btn,
+    .nav-item,
+    .form-input,
+    .form-select {
+      @apply min-h-[44px];
+    }
+  }
+}
