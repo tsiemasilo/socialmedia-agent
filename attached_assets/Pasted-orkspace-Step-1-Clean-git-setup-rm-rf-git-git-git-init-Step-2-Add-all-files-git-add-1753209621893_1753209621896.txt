@@ -1,0 +1,136 @@
+orkspace$ # Step 1: Clean git setup
+rm -rf .git .git*
+git init
+
+# Step 2: Add all files
+git add .
+
+# Step 3: Create commit
+git commit -m "Clean AI social media platform deployment
+
+Features:
+- Enhanced load shedding solutions with daily prompts
+- Real noshedding.co.za product integration
+- AI content generation with GPT-4o and DALL-E 3
+- Instagram Business API integration
+- Mobile-responsive design
+- PostgreSQL database integration
+- Account persistence system"
+
+# Step 4: Configure remote with your token
+git remote add origin https://${GITHUB_PERSONAL_ACCESS_TOKEN}@github.com/tsiemasilo/socialmedia-agent.git
+
+# Step 5: Push to GitHub
+git push -u origin main --force
+Initialized empty Git repository in /home/runner/workspace/.git/
+[main (root-commit) d8ef1ab] Clean AI social media platform deployment
+ 104 files changed, 20517 insertions(+)
+ create mode 100644 .replit
+ create mode 100644 DEPLOYMENT_GUIDE.md
+ create mode 100644 attached_assets/Pasted-Noshedding-co-za-focused-on-load-shedding-solutions-can-attract-huge-engagement-in-South-Africa-be-1752853950128_1752853950128.txt
+ create mode 100644 client/index.html
+ create mode 100644 client/public/_redirects
+ create mode 100644 client/src/App.tsx
+ create mode 100644 client/src/components/accounts/connected-accounts.tsx
+ create mode 100644 client/src/components/accounts/instagram-connect.tsx
+ create mode 100644 client/src/components/content/content-creator-form.tsx
+ create mode 100644 client/src/components/content/content-preview.tsx
+ create mode 100644 client/src/components/dashboard/analytics-chart.tsx
+ create mode 100644 client/src/components/dashboard/stats-cards.tsx
+ create mode 100644 client/src/components/dashboard/upcoming-posts.tsx
+ create mode 100644 client/src/components/layout/mobile-sidebar.tsx
+ create mode 100644 client/src/components/layout/sidebar.tsx
+ create mode 100644 client/src/components/layout/topbar.tsx
+ create mode 100644 client/src/components/ui/accordion.tsx
+ create mode 100644 client/src/components/ui/alert-dialog.tsx
+ create mode 100644 client/src/components/ui/alert.tsx
+ create mode 100644 client/src/components/ui/aspect-ratio.tsx
+ create mode 100644 client/src/components/ui/avatar.tsx
+ create mode 100644 client/src/components/ui/badge.tsx
+ create mode 100644 client/src/components/ui/breadcrumb.tsx
+ create mode 100644 client/src/components/ui/button.tsx
+ create mode 100644 client/src/components/ui/calendar.tsx
+ create mode 100644 client/src/components/ui/card.tsx
+ create mode 100644 client/src/components/ui/carousel.tsx
+ create mode 100644 client/src/components/ui/chart.tsx
+ create mode 100644 client/src/components/ui/checkbox.tsx
+ create mode 100644 client/src/components/ui/collapsible.tsx
+ create mode 100644 client/src/components/ui/command.tsx
+ create mode 100644 client/src/components/ui/context-menu.tsx
+ create mode 100644 client/src/components/ui/dialog.tsx
+ create mode 100644 client/src/components/ui/drawer.tsx
+ create mode 100644 client/src/components/ui/dropdown-menu.tsx
+ create mode 100644 client/src/components/ui/form.tsx
+ create mode 100644 client/src/components/ui/hover-card.tsx
+ create mode 100644 client/src/components/ui/input-otp.tsx
+ create mode 100644 client/src/components/ui/input.tsx
+ create mode 100644 client/src/components/ui/label.tsx
+ create mode 100644 client/src/components/ui/menubar.tsx
+ create mode 100644 client/src/components/ui/navigation-menu.tsx
+ create mode 100644 client/src/components/ui/pagination.tsx
+ create mode 100644 client/src/components/ui/popover.tsx
+ create mode 100644 client/src/components/ui/progress.tsx
+ create mode 100644 client/src/components/ui/radio-group.tsx
+ create mode 100644 client/src/components/ui/resizable.tsx
+ create mode 100644 client/src/components/ui/scroll-area.tsx
+ create mode 100644 client/src/components/ui/select.tsx
+ create mode 100644 client/src/components/ui/separator.tsx
+ create mode 100644 client/src/components/ui/sheet.tsx
+ create mode 100644 client/src/components/ui/sidebar.tsx
+ create mode 100644 client/src/components/ui/skeleton.tsx
+ create mode 100644 client/src/components/ui/slider.tsx
+ create mode 100644 client/src/components/ui/switch.tsx
+ create mode 100644 client/src/components/ui/table.tsx
+ create mode 100644 client/src/components/ui/tabs.tsx
+ create mode 100644 client/src/components/ui/textarea.tsx
+ create mode 100644 client/src/components/ui/toast.tsx
+ create mode 100644 client/src/components/ui/toaster.tsx
+ create mode 100644 client/src/components/ui/toggle-group.tsx
+ create mode 100644 client/src/components/ui/toggle.tsx
+ create mode 100644 client/src/components/ui/tooltip.tsx
+ create mode 100644 client/src/hooks/use-mobile.tsx
+ create mode 100644 client/src/hooks/use-toast.ts
+ create mode 100644 client/src/index.css
+ create mode 100644 client/src/lib/api.ts
+ create mode 100644 client/src/lib/queryClient.ts
+ create mode 100644 client/src/lib/utils.ts
+ create mode 100644 client/src/main.tsx
+ create mode 100644 client/src/pages/accounts.tsx
+ create mode 100644 client/src/pages/analytics.tsx
+ create mode 100644 client/src/pages/content-creator.tsx
+ create mode 100644 client/src/pages/dashboard.tsx
+ create mode 100644 client/src/pages/not-found.tsx
+ create mode 100644 components.json
+ create mode 100644 dist/_redirects
+ create mode 100644 dist/index.js
+ create mode 100644 dist/public/_redirects
+ create mode 100644 dist/public/assets/index-DpVe-Dpe.css
+ create mode 100644 dist/public/assets/index-ObFGVPjC.js
+ create mode 100644 dist/public/index.html
+ create mode 100644 drizzle.config.ts
+ create mode 100644 netlify.toml
+ create mode 100644 netlify/functions/instagram-connect.js
+ create mode 100644 netlify/functions/instagram-connect.ts
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 postcss.config.js
+ create mode 100644 replit.md
+ create mode 100644 scripts/check-tables.ts
+ create mode 100644 scripts/create-demo-user.ts
+ create mode 100644 scripts/seed-database.ts
+ create mode 100644 server/db.ts
+ create mode 100644 server/index.ts
+ create mode 100644 server/routes.ts
+ create mode 100644 server/services/instagram.ts
+ create mode 100644 server/services/openai.ts
+ create mode 100644 server/storage.ts
+ create mode 100644 server/vite.ts
+ create mode 100644 shared/schema.ts
+ create mode 100644 tailwind.config.ts
+ create mode 100644 tsconfig.json
+ create mode 100644 vite.config.ts
+error: unable to read askpass response from 'replit-git-askpass'
+Password for 'https://github.com': 
+remote: No anonymous write access.
+fatal: Authentication failed for 'https://github.com/tsiemasilo/socialmedia-agent.git/'
+~/workspace$ 
