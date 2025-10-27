@@ -21,7 +21,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20">
       <Topbar 
         title="Dashboard" 
         subtitle="Welcome back! Here's your social media performance"
@@ -34,13 +34,13 @@ export default function Dashboard() {
         </div>
 
         {/* Content Creator and Connected Accounts */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 mb-6 md:mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
           <ContentCreatorForm onContentGenerated={handleContentGenerated} />
           <ConnectedAccounts />
         </div>
 
         {/* Analytics and Upcoming Posts */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
           <AnalyticsChart />
           <UpcomingPosts />
         </div>

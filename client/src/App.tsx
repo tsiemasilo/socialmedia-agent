@@ -16,7 +16,7 @@ function AppLayout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   
   return (
-    <div className="min-h-screen gradient-bg">
+    <div className="min-h-screen bg-slate-50">
       {/* Desktop Sidebar */}
       <div className="hidden md:block">
         <Sidebar currentPath={location} />
@@ -28,7 +28,7 @@ function AppLayout({ children }: { children: React.ReactNode }) {
       </div>
       
       {/* Main Content */}
-      <div className="md:ml-64">
+      <div className="md:ml-64 min-h-screen">
         {children}
       </div>
     </div>
